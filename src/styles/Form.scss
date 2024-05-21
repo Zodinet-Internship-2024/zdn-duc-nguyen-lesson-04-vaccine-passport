@@ -1,0 +1,96 @@
+@import "./variables";
+@import "typography";
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.form {
+  background-color: $bg-color-form;
+  padding: 24px 16px 24px 16px;
+  border-radius: 16px;
+
+  height: 100%;
+  font-family: $font-family;
+  &__title {
+    color: $primary-color;
+    span {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: left;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: left;
+    }
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+    p {
+      margin: 0px;
+      font-size: 12px;
+      color: red;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 16px 8px 16px;
+      background: $bg-color-white;
+      border: 1px solid;
+      border-radius: 12px;
+      margin-bottom: 8px;
+
+      .form__input-label {
+        span {
+          color: red;
+        }
+      }
+      label {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+      }
+      &-value {
+        border: none;
+        color: $primary-color;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      &-value:focus {
+        outline: none;
+      }
+      select {
+        border: none;
+        color: $primary-color;
+        font-size: 16px;
+        font-weight: 400;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    &-text:focus-within {
+      border-color: $border-color-input;
+    }
+    &-submit {
+      padding: 16px 0px;
+      background: $bg-color--small-red;
+      border-radius: 12px;
+      border: 0px;
+      color: $bg-color-white;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: Google Sans;
+      line-height: 24px;
+    }
+  }
+}
